@@ -1,0 +1,544 @@
+/**
+ * TrajectoryViewer — semantic layout; tokens from variables.css
+ */
+
+.page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagePad {
+  padding: 24px;
+}
+
+.breadcrumb {
+  margin-bottom: 12px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.infoCard {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 16px;
+  font-size: var(--font-size-body-compact);
+}
+
+.metricsRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.outcomeCard {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border-secondary);
+  min-width: 160px;
+}
+
+.outcomeLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.rewardBreakdown {
+  margin-top: 12px;
+}
+
+.rewardBreakdownLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin-right: 8px;
+}
+
+.rewardTotalBase {
+  font-size: var(--font-size-body-compact);
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.rewardTotalPos {
+  composes: rewardTotalBase;
+  color: var(--color-success);
+}
+
+.rewardTotalNeg {
+  composes: rewardTotalBase;
+  color: var(--color-error);
+}
+
+.rewardTotalNeutral {
+  composes: rewardTotalBase;
+  color: var(--color-text-secondary);
+}
+
+.badgeRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.rewardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-mono);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.rewardBadgePos {
+  composes: rewardBadge;
+  color: var(--color-success);
+  background-color: color-mix(in srgb, var(--color-success) 8%, transparent);
+}
+
+.rewardBadgeNeg {
+  composes: rewardBadge;
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 8%, transparent);
+}
+
+.rewardBadgeNeutral {
+  composes: rewardBadge;
+  color: var(--color-text-secondary);
+  background-color: color-mix(in srgb, var(--color-gray-500) 8%, transparent);
+}
+
+.annotationBox {
+  background-color: var(--color-background-hover);
+  border-left: 3px solid var(--color-warning);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.annotationHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.annotationTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.annotationRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.annotationIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.annotationBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.annotationMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.turnRange {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-mono);
+  color: var(--color-text-tertiary);
+}
+
+.patternLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.annotationDesc {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-primary);
+  margin-top: 4px;
+}
+
+.severityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-axis);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.severityError {
+  composes: severityBadge;
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 12%, transparent);
+}
+
+.severityWarning {
+  composes: severityBadge;
+  color: var(--color-warning);
+  background-color: color-mix(in srgb, var(--color-warning) 12%, transparent);
+}
+
+.severityInfo {
+  composes: severityBadge;
+  color: var(--color-info);
+  background-color: color-mix(in srgb, var(--color-info) 12%, transparent);
+}
+
+.collapsible {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-border-secondary);
+  overflow: hidden;
+}
+
+.collapsibleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapsibleHeaderOpen {
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.collapsibleHeaderInner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chevronMuted {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.collapsibleTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.collapsibleBody {
+  padding: 16px 20px;
+}
+
+.centerPad {
+  text-align: center;
+  padding: 20px;
+}
+
+.mutedCenter {
+  color: var(--color-text-tertiary);
+  text-align: center;
+  padding: 20px;
+}
+
+.timelineHeading {
+  margin-bottom: 8px;
+}
+
+.timelineTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.timelineCount {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.emptyTurns {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  padding: 48px;
+}
+
+/* Turn card */
+.turnCard {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border-left: 3px solid var(--color-border-secondary);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: all 200ms ease-out;
+}
+
+.turnCardError {
+  border-left-color: var(--color-error);
+}
+
+.turnHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.turnHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.turnChevron {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.turnTitle {
+  font-size: var(--font-size-body-compact);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.turnHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.turnReward {
+  font-family: var(--font-family-mono);
+}
+
+.turnRewardPos {
+  composes: turnReward;
+  color: var(--color-success);
+}
+
+.turnRewardNeg {
+  composes: turnReward;
+  color: var(--color-error);
+}
+
+.annotationBannerIcon {
+  font-size: var(--font-size-lg);
+  color: var(--color-warning);
+}
+
+.turnContent {
+  padding: 0 16px 12px;
+}
+
+.traceLinkRow {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.linkBtn {
+  background: none;
+  border: none;
+  color: var(--color-info);
+  cursor: pointer;
+  font-size: var(--font-size-body-compact);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Event blocks */
+.eventRow {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.eventRowReasoning {
+  composes: eventRow;
+  background-color: var(--color-background-input);
+}
+
+.eventRowAction {
+  composes: eventRow;
+  background-color: transparent;
+}
+
+.eventRowActionError {
+  composes: eventRowAction;
+  background-color: color-mix(in srgb, var(--color-error) 6%, transparent);
+}
+
+.eventRowObservation {
+  composes: eventRow;
+  background-color: transparent;
+}
+
+.eventEmoji {
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.eventMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.eventTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.eventKind {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+}
+
+.monoMuted {
+  font-size: var(--font-size-axis);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-mono);
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-axis);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.statusPillOk {
+  composes: statusPill;
+  color: var(--color-success);
+  background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
+}
+
+.statusPillErr {
+  composes: statusPill;
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 12%, transparent);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-axis);
+  color: var(--color-text-tertiary);
+  margin-bottom: 2px;
+}
+
+.outputToggle {
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  font-size: var(--font-size-axis);
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inlineErrorBanner {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-axis);
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 12%, transparent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.rewardPill {
+  font-size: var(--font-size-axis);
+  font-family: var(--font-family-mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.rewardPillPos {
+  composes: rewardPill;
+  color: var(--color-success);
+  background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
+}
+
+.rewardPillNeg {
+  composes: rewardPill;
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 12%, transparent);
+}
+
+.truncatablePre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-secondary);
+}
+
+.truncatableToggle {
+  background: none;
+  border: none;
+  color: var(--color-info);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  padding: 4px 0;
+}
+
+.infoTagLabel {
+  color: var(--color-text-tertiary);
+}
+
+.infoTagValue {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-body-compact);
+}
+
+.miniIcon {
+  font-size: var(--font-size-mini-icon);
+}

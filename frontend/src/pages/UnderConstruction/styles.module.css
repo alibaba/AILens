@@ -1,0 +1,22 @@
+/**
+ * UnderConstruction CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.icon {
+  color: var(--color-primary);
+}
+
+.backButton {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #000;
+}

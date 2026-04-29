@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${CLICKHOUSE_URL:jdbc:clickhouse://localhost:8123/default}
+    username: ${CLICKHOUSE_USERNAME:default}
+    password: ${CLICKHOUSE_PASSWORD:}
+    driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+
+logging:
+  file:
+    name: logs/gateway.log
+
+clickhouse:
+  tables:
+    otlp: otel_traces
+    rl: rl_traces
+
+traceql:
+  views:
+    service_stats: "{status_code = 'OK'} | select(service_name, count() as cnt, avg(duration) as avg_dur) by (service_name)"
+    rl_model_stats: "{} | select(model, avg(reward) as avg_reward, avg(duration_ms) as avg_dur, count() as num) by (model)"

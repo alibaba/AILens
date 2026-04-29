@@ -1,0 +1,43 @@
+/**
+ * ExperimentDetail CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-background-page);
+}
+
+.page {
+  padding: 24px;
+}
+
+.tabsPanel {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  padding: 0 16px 16px;
+}
+
+.loadingWrap {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.notFound {
+  padding: 24px;
+  color: var(--color-error);
+}
+
+.tabsContainer {
+  flex: 1;
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  margin: 16px 24px 24px;
+  padding: 16px;
+}

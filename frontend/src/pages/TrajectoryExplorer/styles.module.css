@@ -1,0 +1,84 @@
+/**
+ * TrajectoryExplorer CSS Module
+ * 页面级布局与语义色；排版 token 用 variables.css，避免与 theme 分叉。
+ */
+
+.container {
+  padding: 24px;
+}
+
+.filterDash {
+  color: var(--color-text-disabled);
+  line-height: 32px;
+}
+
+/** Reward / Turns：标签 + min–max 作为一整块参与 inline 表单换行，组内不换行 */
+.filterRangeCluster {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+}
+
+/** 表格内数字/ID：等宽栈用全局 .font-mono + clsx */
+.monoCell {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  word-break: break-all;
+}
+
+.monoCellCompact {
+  font-size: var(--font-size-body-compact);
+}
+
+.rewardPos {
+  color: var(--color-success);
+}
+
+.rewardNeg {
+  color: var(--color-error);
+}
+
+.rewardZero {
+  color: var(--color-text-secondary);
+}
+
+.summaryBar {
+  background-color: var(--color-background-input);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px 8px 0 0;
+  padding: 8px 16px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.summaryCount {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.summaryOutcomeCount {
+  margin-left: 4px;
+}
+
+.trajectoriesTable {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-secondary);
+  border-top: none;
+  min-width: 0;
+}
+
+.errorBanner {
+  padding: 24px;
+  color: var(--color-error);
+}
+
+.tableContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+}

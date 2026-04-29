@@ -1,0 +1,20 @@
+fastapi
+uvicorn
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+httpx>=0.24.0
+typing_extensions>=3.7.4  # Python 3.6.8 compatibility for Protocol
+
+# Observability dependencies
+structlog
+prometheus-client>=0.17.0
+opentelemetry-api>=1.20.0
+opentelemetry-sdk>=1.20.0
+opentelemetry-instrumentation-fastapi>=0.41b0
+opentelemetry-instrumentation-requests>=0.41b0
+opentelemetry-exporter-otlp>=1.20.0
+psutil>=5.9.0
+
+# Testing dependencies
+pytest>=7.0.0
+pytest-asyncio>=0.21.0

@@ -1,0 +1,50 @@
+.root {
+  min-width: 160px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  background-color: var(--color-background-panel);
+  padding: 16px 20px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-tertiary);
+}
+
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.value {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-metric);
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--color-text-primary);
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size);
+}
+
+.trendUp {
+  color: var(--color-success);
+}
+
+.trendDown {
+  color: var(--color-error);
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}

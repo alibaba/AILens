@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Commit Message 格式检查
+# 遵循 Conventional Commits 规范
+# 格式：<type>[optional scope]: <description>
+
+commit_regex="^(feat|fix|docs|style|refactor|perf|test|chore|ci|revert)(\(.+\))?: .{1,50}"
+
+if ! grep -qE "$commit_regex" "$1"; then
+  echo ""
+  echo "❌ 无效的 commit message 格式！"
+  echo ""
+  echo "请使用正确的 Conventional Commits 格式："
+  echo "  <type>[optional scope]: <description>"
+  echo ""
+  echo "示例："
+  echo "  feat(ui): 添加新按钮组件"
+  echo "  fix(api): 修复数据获取问题"
+  echo "  docs: 更新README文档"
+  echo "  refactor: 重构组件结构"
+  echo ""
+  echo "支持的类型: feat, fix, docs, style, refactor, perf, test, chore, ci, revert"
+  echo ""
+  echo "如需紧急提交，可使用: git commit --no-verify"
+  echo ""
+  exit 1
+fi

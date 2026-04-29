@@ -1,0 +1,80 @@
+version: "3.9"
+
+services:
+  otelcol:
+    image: otel/opentelemetry-collector-contrib:0.147.0
+    container_name: ai-lens-otelcol
+    command: ["--config=/etc/otelcol/config.yaml"]
+    volumes:
+      - ./docker/otelcol/config.yaml:/etc/otelcol/config.yaml:ro
+    ports:
+      - "4317:4317"   # OTLP gRPC (traces + logs)
+      - "4318:4318"   # OTLP HTTP (traces + logs)
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+    restart: unless-stopped
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: ai-lens-clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./docker/clickhouse:/docker-entrypoint-initdb.d
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  gateway:
+    build:
+      context: ../gateway
+      dockerfile: Dockerfile
+    container_name: ai-lens-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      CLICKHOUSE_URL: jdbc:clickhouse://clickhouse:8123/default
+      CLICKHOUSE_USERNAME: default
+      CLICKHOUSE_PASSWORD: ""
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: ai-lens-backend
+    ports:
+      - "8000:8000"
+    environment:
+      ENVIRONMENT: production
+      LOG_LEVEL: INFO
+      LOG_FORMAT: json
+      TRACEQL_BASE_URL: http://gateway:8080
+    depends_on:
+      - gateway
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    container_name: ai-lens-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  clickhouse_data:

@@ -1,0 +1,63 @@
+/**
+ * TaskExplorer CSS Module
+ * 页面级布局与语义色；排版 token 用 variables.css，避免与 theme 分叉。
+ */
+
+.container {
+  padding: 24px;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  align-items: center;
+}
+
+.filterLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.filterDash {
+  color: var(--color-text-disabled);
+}
+
+.monoCell {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.summaryBar {
+  background-color: var(--color-background-input);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px 8px 0 0;
+  padding: 8px 16px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.summaryCount {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.tasksTable {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-secondary);
+  border-top: none;
+}
+
+.errorBanner {
+  padding: 24px;
+  color: var(--color-error);
+}

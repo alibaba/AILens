@@ -1,0 +1,65 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-secondary);
+  background-color: var(--color-background-page);
+  padding: 0 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.crumbNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-body-compact);
+}
+
+.crumbLink {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.crumbLink:hover {
+  color: var(--color-text-primary);
+}
+
+.crumbSep {
+  color: var(--color-text-disabled);
+}
+
+.crumbCurrent {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.crumbSegment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.experimentName {
+  font-size: var(--font-size-body-compact);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.experimentMeta {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-tertiary);
+}
+
+.tagScaffold {
+  margin-left: 2px;
+}

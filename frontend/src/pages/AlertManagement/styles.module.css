@@ -1,0 +1,187 @@
+/**
+ * AlertManagement CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.formCard {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.tableContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.tableRow {
+  cursor: pointer;
+}
+
+.cellText {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-compact);
+}
+
+.primaryButton {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.severityDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.severityDot[data-severity='critical'] {
+  background-color: var(--color-error);
+}
+
+.severityDot[data-severity='warning'] {
+  background-color: var(--color-warning);
+}
+
+.severityDot[data-severity='info'] {
+  background-color: var(--color-info);
+}
+
+.severityDot[data-severity='default'] {
+  background-color: var(--color-text-tertiary);
+}
+
+.severityCell {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cellName {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-primary);
+}
+
+.cellAgent {
+  font-size: var(--font-size-body-compact);
+  font-family: var(--font-family-mono);
+  color: var(--color-text-secondary);
+}
+
+.cellTime {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.summaryBar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: var(--color-background-panel);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: var(--font-size-body-compact);
+}
+
+.drawerBody {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-compact);
+}
+
+.drawerBlock {
+  margin-bottom: 16px;
+}
+
+.drawerBlockLoose {
+  margin-bottom: 24px;
+}
+
+.drawerLabel {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-axis);
+  margin-bottom: 4px;
+}
+
+.drawerValueStrong {
+  font-weight: 600;
+}
+
+.drawerMonoSm {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.drawerMetricError {
+  color: var(--color-error);
+  font-weight: 700;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-section);
+}
+
+.drawerMetricMuted {
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-section);
+}
+
+.drawerSlash {
+  color: var(--color-text-tertiary);
+  margin: 0 8px;
+}
+
+.drawerSeverity {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.drawerFiringMono {
+  font-family: var(--font-family-mono);
+}
+
+.formLabel {
+  color: var(--color-text-secondary);
+}
+
+.ruleNameCell {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.ruleExprCell {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.ruleThresholdCell {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-body-compact);
+}
+
+.rulesToolbar {
+  margin-bottom: 16px;
+}
+
+.tableRowClick {
+  cursor: pointer;
+}

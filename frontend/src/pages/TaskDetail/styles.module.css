@@ -1,0 +1,5 @@
+/* 数据格：由 Table components.body.cell 挂载，避免 :global 穿透 tbody */
+.dataCell {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}

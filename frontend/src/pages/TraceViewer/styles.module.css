@@ -1,0 +1,351 @@
+/**
+ * TraceViewer — semantic layout; tokens from variables.css
+ */
+
+.page {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pagePad {
+  padding: 24px;
+}
+
+.panel {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+}
+
+.panelPadded {
+  composes: panel;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.rlContextHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rlContextEmoji {
+  font-size: var(--font-size-lg);
+}
+
+.rlContextTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.rlContextGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  font-size: var(--font-size-body-compact);
+}
+
+.ctxLabel {
+  color: var(--color-text-tertiary);
+}
+
+.ctxValue {
+  color: var(--color-text-primary);
+}
+
+.linkOutlineBtn {
+  background: none;
+  border: 1px solid var(--color-info);
+  color: var(--color-info);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: var(--font-size-body-compact);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.linkOutlineBtnMargin {
+  margin-top: 12px;
+}
+
+.traceHeader {
+  composes: panelPadded;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+}
+
+.traceIdRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.traceIdLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+.traceIdValue {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-primary);
+}
+
+.copyIcon {
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  font-size: var(--font-size-body-compact);
+}
+
+.metaMuted {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-secondary);
+}
+
+.waterfallShell {
+  display: flex;
+  gap: 0;
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.waterfallLeft {
+  width: 60%;
+  border-right: 1px solid var(--color-border-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.waterfallScroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.detailPane {
+  width: 40%;
+}
+
+.spanRow {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+  background-color: transparent;
+  border-left: 3px solid transparent;
+  transition: background-color 150ms;
+}
+
+.spanRowHover {
+  background-color: var(--color-background-hover);
+}
+
+.spanRowSelected {
+  border-left-color: var(--color-primary);
+}
+
+.spanNameCol {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.toggleCell {
+  width: 16px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: var(--font-size-micro);
+  color: var(--color-text-tertiary);
+}
+
+.dotBullet {
+  font-size: var(--font-size-dot);
+  vertical-align: middle;
+}
+
+.spanNameText {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-primary);
+  margin-left: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spanNameTextError {
+  color: var(--color-error);
+}
+
+.errorEmoji {
+  margin-left: 6px;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.waterfallTrack {
+  width: 60%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.waterfallBar {
+  position: absolute;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.durationLabel {
+  position: absolute;
+  font-size: var(--font-size-axis);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.detailEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-body-compact);
+}
+
+.detailBody {
+  padding: 16px 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.detailHeaderBlock {
+  margin-bottom: 16px;
+}
+
+.detailOpTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.detailMetaRow {
+  display: flex;
+  gap: 16px;
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-secondary);
+}
+
+.statusOk {
+  color: var(--color-success);
+}
+
+.statusErr {
+  color: var(--color-error);
+}
+
+.errorBox {
+  background-color: color-mix(in srgb, var(--color-error) 8%, transparent);
+  border: 1px solid var(--color-error);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: var(--font-size-body-compact);
+  color: var(--color-error);
+  font-family: var(--font-family-mono);
+}
+
+.sectionLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.attrTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.attrRow {
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.attrKeyCell {
+  padding: 6px 8px;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  vertical-align: top;
+  width: 35%;
+}
+
+.attrValueCell {
+  padding: 6px 8px;
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+.attrValueCellError {
+  color: var(--color-error);
+}
+
+.attrEmptyCell {
+  padding: 12px 8px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+.eventsSection {
+  margin-top: 16px;
+}
+
+.eventCard {
+  padding: 8px 10px;
+  margin-bottom: 4px;
+  background-color: var(--color-background-input);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+
+.eventName {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.eventAttrLine {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-mono);
+  margin-top: 2px;
+}
+
+.timeAxis {
+  position: relative;
+  height: 24px;
+  border-top: 1px solid var(--color-border-secondary);
+  margin-left: 40%;
+}
+
+.timeAxisTick {
+  position: absolute;
+  top: 4px;
+  font-size: var(--font-size-micro);
+  color: var(--color-text-tertiary);
+}
+
+.timeAxisTickEnd {
+  transform: translateX(-100%);
+}

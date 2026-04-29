@@ -1,0 +1,92 @@
+/* ErrorBoundary CSS Module - 深色主题样式 */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--color-background-page);
+  color: var(--color-text-primary);
+}
+
+.title {
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+}
+
+.secondaryButton {
+  background-color: var(--color-background-hover);
+  border-color: var(--color-border-primary);
+  color: var(--color-text-secondary);
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-background-input);
+  border-color: var(--color-border-primary);
+  color: var(--color-text-primary);
+}
+
+.debugDetails {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: var(--color-background-panel);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 8px;
+  max-width: 900px;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.debugSummary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  user-select: none;
+}
+
+.debugContent {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background-input);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.errorSection {
+  margin-bottom: 12px;
+}
+
+.errorLabel {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.errorMessage {
+  margin-top: 4px;
+  color: var(--color-error);
+}
+
+.errorStack {
+  margin-top: 4px;
+  font-family: Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.componentStack {
+  margin-top: 4px;
+  font-family: Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

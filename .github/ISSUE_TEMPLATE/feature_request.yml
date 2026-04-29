@@ -1,0 +1,64 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Backend (Python FastAPI)
+        - Frontend (React)
+        - Gateway (Java / TraceQL)
+        - OTel Collector / Data Ingestion
+        - Docker / Deployment
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problem Statement
+      description: What problem does this feature solve?
+      placeholder: I'm always frustrated when [...]
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      placeholder: Describe the solution you'd like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      placeholder: Any alternative approaches you considered...
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ✅ Acceptance Criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📝 Additional Context
+      placeholder: Screenshots, mockups, or any other context...

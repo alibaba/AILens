@@ -1,0 +1,48 @@
+.panel {
+  background-color: var(--color-background-panel);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.toolNameTotal {
+  font-weight: 700;
+}
+
+.toolNameMono {
+  font-family: var(--font-family-mono);
+  font-weight: 400;
+}
+
+.p99Mono {
+  font-family: var(--font-family-mono);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.p99High {
+  color: var(--color-error);
+  font-weight: 700;
+}
+
+.ratePill {
+  font-family: var(--font-family-mono);
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.rateTierLow {
+  color: var(--color-error);
+  background-color: color-mix(in srgb, var(--color-error) 12%, transparent);
+}
+
+.rateTierMid {
+  color: var(--color-warning);
+  background-color: color-mix(in srgb, var(--color-warning) 12%, transparent);
+}
+
+.rateTierHigh {
+  color: var(--color-success);
+  background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
+}

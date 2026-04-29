@@ -1,0 +1,33 @@
+.scrollArea {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 280px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.group {
+  margin-bottom: 12px;
+}
+
+.groupTitle {
+  font-size: var(--font-size-axis);
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.checkboxRow {
+  padding: 2px 0;
+}
+
+.columnLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}

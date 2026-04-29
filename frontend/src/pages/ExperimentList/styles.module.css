@@ -1,0 +1,110 @@
+/**
+ * ExperimentList CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filterBar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  align-items: center;
+}
+
+.tabsContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  padding: 0 16px 16px;
+}
+
+.experimentTable {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.tableRow {
+  cursor: pointer;
+}
+
+.noProjectMessage {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-top: 120px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+.loadingContainer {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.errorMessage {
+  padding: 24px;
+  color: var(--color-error);
+}
+
+.cellNameStrong {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.scaffoldTagRow {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.scaffoldTag {
+  margin: 0;
+  font-size: var(--font-size-axis);
+}
+
+.cellModel {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.cellMetric {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-compact);
+}
+
+.cellMonoMuted {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.selectStyle {
+  min-width: 120px;
+}

@@ -1,0 +1,25 @@
+# Maven
+target/
+*.jar
+*.war
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+*.gz
+logs/
+
+# Claude Code
+.claude
+
+# Environment / local config
+.env
+application-local.yml

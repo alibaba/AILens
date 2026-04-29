@@ -1,0 +1,41 @@
+name: CI@gateway
+
+on:
+  push:
+    branches: ["main", "release/**"]
+    paths:
+      - "gateway/**"
+      - ".github/workflows/ci-gateway.yml"
+  pull_request:
+    branches: ["main", "release/**"]
+    paths:
+      - "gateway/**"
+      - ".github/workflows/ci-gateway.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build & Test (Maven)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: "maven"
+          cache-dependency-path: gateway/pom.xml
+
+      - name: Build & run tests
+        working-directory: gateway
+        run: mvn verify --batch-mode --no-transfer-progress

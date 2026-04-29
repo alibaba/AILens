@@ -1,0 +1,117 @@
+/**
+ * DatasetList CSS Module
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+/* ==================== Dashboard ==================== */
+
+.summaryCard {
+  padding: 16px 24px;
+  background-color: var(--color-background-panel);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.summaryStats {
+  display: flex;
+  align-items: center;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.statItem:not(:first-child) {
+  padding-left: 32px;
+}
+
+.statLabel {
+  font-size: var(--font-size);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.statValue {
+  font-size: var(--font-size-metric);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.statDivider {
+  width: 1px;
+  height: 48px;
+  background-color: var(--color-border-secondary);
+}
+
+/* ==================== Table ==================== */
+
+.tabsContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  padding: 0 16px 16px;
+}
+
+.datasetTable {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.tableRow {
+  cursor: pointer;
+}
+
+.noProjectMessage {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-top: 120px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+.loadingContainer {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.errorMessage {
+  padding: 24px;
+  color: var(--color-error);
+}
+
+.cellNameStrong {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.cellMono {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.cellMetric {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-compact);
+}

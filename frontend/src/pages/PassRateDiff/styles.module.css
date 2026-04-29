@@ -1,0 +1,137 @@
+/**
+ * PassRateDiff CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.tableContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+/* 等宽：在 TSX 中与全局类 .font-mono 组合使用，例如 clsx('font-mono', styles.cellText) */
+.cellText {
+  color: var(--color-text-secondary);
+}
+
+.cellPrimary {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.filterRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterLabel {
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-secondary);
+}
+
+.w140 {
+  width: 140px;
+}
+
+.w150 {
+  width: 150px;
+}
+
+.w130 {
+  width: 130px;
+}
+
+.loadingWrap {
+  padding: 40px;
+  text-align: center;
+}
+
+.cardPanel {
+  background-color: var(--color-background-panel);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.cardPanelMb {
+  composes: cardPanel;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.toolbarTitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+
+.toolbarRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.chartPlaceholder {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-tertiary);
+}
+
+.extremeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.extremeColTitle {
+  font-size: var(--font-size-body-compact);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.extremeColTitleImproved {
+  composes: extremeColTitle;
+  color: var(--color-success);
+}
+
+.extremeColTitleDegraded {
+  composes: extremeColTitle;
+  color: var(--color-error);
+}

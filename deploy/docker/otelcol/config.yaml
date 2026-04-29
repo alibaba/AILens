@@ -1,0 +1,61 @@
+# OpenTelemetry Collector configuration for AI-Lens
+#
+# Two pipelines in one collector:
+#   traces  — Agent service traces (OTel SDK) → otel_traces table
+#   logs    — RL training trajectories (HarborSDK) → otel_logs table
+#             (rl_traces materialized view is derived automatically)
+#
+# Receiver:  OTLP gRPC :4317 / HTTP :4318  (single endpoint, both signals)
+# Exporter:  ClickHouse native protocol (port 9000)
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 10000
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 512
+    spike_limit_mib: 128
+
+exporters:
+  clickhouse:
+    endpoint: tcp://clickhouse:9000?dial_timeout=10s
+    database: default
+    traces_table_name: otel_traces
+    logs_table_name: otel_logs
+    timeout: 10s
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+      max_elapsed_time: 300s
+
+  # Optional: log generated SQL to stdout for debugging
+  debug:
+    verbosity: basic
+
+service:
+  telemetry:
+    logs:
+      level: info
+
+  pipelines:
+    # Agent service traces → otel_traces
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [clickhouse]
+
+    # RL training trajectories (HarborSDK logs) → otel_logs → rl_traces (MV)
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [clickhouse]

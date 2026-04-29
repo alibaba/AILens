@@ -1,0 +1,84 @@
+/**
+ * ServiceMonitor CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.servicesSection {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.kpiRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.sectionRow {
+  display: flex;
+  gap: 16px;
+}
+
+.halfPanel {
+  flex: 1;
+  min-width: 0;
+}
+
+.skillChartWrap {
+  max-width: 50%;
+}
+
+.collapseLabel {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.chartSlot {
+  height: 260px;
+}
+
+.collapseTransparent {
+  background: transparent;
+}

@@ -1,0 +1,105 @@
+/**
+ * TraceSearch CSS Module
+ * 消除内联样式，建立语义化类名管理
+ */
+
+.container {
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  background-color: var(--color-background-panel);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 300px;
+}
+
+.searchButton {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #000;
+  font-weight: 600;
+}
+
+.summaryBar {
+  background-color: var(--color-background-panel);
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: var(--font-size-body-compact);
+  color: var(--color-text-secondary);
+}
+
+.summaryValue {
+  color: var(--color-text-primary);
+}
+
+.summaryDivider {
+  color: var(--color-border-primary);
+}
+
+.errorHighlight {
+  color: var(--color-error);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 16px;
+}
+
+.tableContainer {
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+  overflow: hidden;
+}
+
+.tableRow {
+  cursor: pointer;
+}
+
+.cellMono {
+  font-size: var(--font-size-axis);
+  color: var(--color-text-secondary);
+}
+
+.cellMonoSm {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.formFieldLabel {
+  font-size: var(--font-size-axis);
+  color: var(--color-text-tertiary);
+  margin-bottom: 4px;
+}
+
+.cellHighlight {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.chartContainer {
+  height: 300px;
+}

@@ -1,0 +1,178 @@
+.layout {
+  display: flex;
+  gap: 16px;
+}
+
+.treePane {
+  flex: 0 0 50%;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.detailPane {
+  flex: 0 0 50%;
+  padding: 16px;
+  background-color: var(--color-background-panel);
+  border-radius: 8px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.emptyHint {
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 32px;
+  font-size: var(--font-size);
+}
+
+.treeTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opName {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.opNameError {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+.durationLabel {
+  font-size: var(--font-size-axis);
+  color: var(--color-text-secondary);
+}
+
+.errorMark {
+  color: var(--color-error);
+}
+
+.tagTight {
+  margin: 0;
+  font-size: var(--font-size-micro);
+}
+
+.detailHeader {
+  margin-bottom: 16px;
+}
+
+.detailOpName {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.detailService {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.metricBox {
+  padding: 8px;
+  background-color: var(--color-background-input);
+  border-radius: 4px;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.metricLabel {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-secondary);
+}
+
+.metricValueMono {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size);
+  color: var(--color-text-primary);
+}
+
+.statusOk {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.statusErr {
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+.timelineBlock {
+  margin-bottom: 16px;
+}
+
+.timelineLabel {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.timelineTrack {
+  height: 8px;
+  background-color: var(--color-background-hover);
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.timelineBar {
+  position: absolute;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.timelineBarOk {
+  background-color: var(--color-info);
+}
+
+.timelineBarErr {
+  background-color: var(--color-error);
+}
+
+.attrSectionLabel {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.attrTable {
+  width: 100%;
+  font-size: var(--font-size-axis);
+}
+
+.attrKey {
+  color: var(--color-text-secondary);
+  padding-right: 8px;
+  vertical-align: top;
+  width: 40%;
+}
+
+.attrVal {
+  font-family: var(--font-family-mono);
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+.errorBox {
+  margin-top: 16px;
+  padding: 8px;
+  background-color: color-mix(in srgb, var(--color-error) 8%, transparent);
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--color-error) 20%, transparent);
+  color: var(--color-error);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+}
