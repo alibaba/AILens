@@ -1,10 +1,35 @@
-# AI-Lens
+<div align="center">
+  <img src="docs/images/logo.jpg" alt="AI Lens Logo" width="480" />
 
-**AI-Lens** 是面向 AI Agent 训练与生产系统的开源可观测平台。提供强化学习（RL）训练全链路可见性——从实验管理、轨迹分析，到实时服务监控和链路查询。
+  <h1>AI-Lens</h1>
+
+<p align="center">
+  <a href="https://github.com/alibaba/AILens">
+    <img src="https://img.shields.io/github/stars/alibaba/AILens.svg?style=social" alt="GitHub stars" />
+  </a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0.html">
+    <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="license" />
+  </a>
+  <a href="https://github.com/alibaba/AILens/releases">
+    <img src="https://img.shields.io/github/v/release/alibaba/AILens" alt="release" />
+  </a>
+  <a href="https://github.com/alibaba/AILens/actions">
+    <img src="https://github.com/alibaba/AILens/actions/workflows/ci-backend.yml/badge.svg?branch=main" alt="CI Backend" />
+  </a>
+  <a href="https://github.com/alibaba/AILens/actions">
+    <img src="https://github.com/alibaba/AILens/actions/workflows/ci-frontend.yml/badge.svg?branch=main" alt="CI Frontend" />
+  </a>
+  <a href="https://github.com/alibaba/AILens/actions">
+    <img src="https://github.com/alibaba/AILens/actions/workflows/ci-gateway.yml/badge.svg?branch=main" alt="CI Gateway" />
+  </a>
+</p>
+
+  <hr />
+</div>
 
 [English](README.md) | [中文](README_CN.md)
 
----
+**AI-Lens** 是面向 AI Agent 训练与生产系统的开源可观测平台。提供强化学习（RL）训练全链路可见性——从实验管理、轨迹分析，到实时服务监控和链路查询。
 
 ## 功能特性
 
